@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f5="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head></h:head>
+    <h:body>
+        <ui:composition template="template/layout.xhtml">     
+
+            <ui:param name="wrapperWidth" value="1055px"/>
+            <ui:param name="search" value="false"/>
+            <ui:param name="leftWidth" value="200px"/>
+            <ui:param name="right" value="false"/>
+            <ui:param name="left" value="false"/>
+            <ui:param name="title" value="true"/>
+            <ui:param name="login" value="true"/>
+            <ui:define name="logo"/>
+
+            <!--title-->
+            <ui:define name="title">
+                Welcome to MicroCenter
+            </ui:define>
+
+            <!--content-->
+            <ui:define  name="content">
+                    <h:form id="content">
+                        <h:inputText styleClass="inputs" f5:placeholder="Credit Card"/><br/><br/>
+                        <h:inputText styleClass="inputs" f5:placeholder="Phone Number"/><br/><br/>
+                        <h:inputText styleClass="inputs" f5:placeholder="Address"/><br/><br/>
+                      
+                        <h:commandButton styleClass="lbutton" value="Place Order" action="#{productFind.placeOrder(productFind.numChosen)}"/><br/><br/>
+                    </h:form>
+            </ui:define> 
+
+            <!--login-->
+            <ui:define  name="login">
+                <ui:fragment rendered="#{loginBean.isLoggedIn eq false}">
+                    <h:form id="loginFormId">
+                        <h:inputText styleClass="inputs" f5:type="email" f5:placeholder="E-mail" value="#{loginBean.userName}"/>            
+                        <h:inputSecret  styleClass="inputs" f5:placeholder="Password" value="#{loginBean.password}"/>            
+                        <h:commandButton styleClass="lbutton" value="loginBean" action="#{loginBean.validateUser()}"/>
+                    </h:form>
+                </ui:fragment>   
+                <ui:fragment rendered="#{loginBean.isLoggedIn eq true}">
+                    <h3 style="margin-bottom: 1px; background-color: white;">Hi, #{loginBean.userName}</h3>
+                </ui:fragment>
+            </ui:define>
+            
+            <!--top-->
+            <ui:define name="top">     
+                .:.Pinnacle Of PC Hardware.:.
+            </ui:define>
+
+            <!--menu-->
+            <ui:define name="menu">
+                <ui:include src="mp1Menu.xhtml" />
+            </ui:define>
+
+            <!--left-->
+            <ui:define name="left">
+                <h:outputText value="PRODUCTS" style="color:white;font-size: 18px;"/><br/>
+                <br/>
+                <h:panelGroup>
+                    <ui:include src="menuPage.xhtml"/>
+                </h:panelGroup>
+            </ui:define>
+
+            <!--bottom-->
+            <ui:define name="bottom">
+                SLCC ASDV © 2019. All Rights Reserved.
+            </ui:define>
+
+        </ui:composition>
+        <br/>
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+    </h:body>
+</html>
+

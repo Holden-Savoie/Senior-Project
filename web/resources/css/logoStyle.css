@@ -1,0 +1,8 @@
+#logo {
+    background-image:url("#{resource['images/microCenter/logo.png']}");
+    margin-right: 1px;
+    width:101px;
+    height:101px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

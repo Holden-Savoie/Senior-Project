@@ -1,0 +1,77 @@
+#content {
+    background: lightskyblue;
+    min-height: 100px;
+}
+.img{
+    margin-top: 100px;
+    max-width: 250px;
+    max-height: 250px;
+}
+.suppliers {
+   border: thin solid black;
+   font-size: initial;
+   margin: 0 auto;
+}
+.supplierHeader {
+   text-align: center;
+   font-style: italic;
+   color: Snow;
+   background: Teal;
+}
+.suppliersFooter {
+   font-size: 0.75em;
+   text-align: center;
+   background: PowderBlue;
+}
+.delete {
+   text-align: center;
+   color: Black;
+   background: Red;
+}
+.evenRow {
+   background: whitesmoke;
+}
+.oddRow {
+   background: darkturquoise;
+}
+.pageLink {
+   font-size: 0.75em;
+}
+.editableControl {
+   text-align:Left;
+}
+.controlPanel {
+   text-align:left;
+}
+.page {
+   text-align:left;
+}
+.bulbImage {
+   border-width: 0px;
+}
+.emphasis {
+   font-size: 1.35em;
+   font-style: italic;
+}
+.value {
+   font-style: italic;
+}
+.controlLeft {
+   width: 45px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlMiddle {
+   width: 50px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlRight {
+   width: 40px;
+   vertical-align: top;
+   text-align:left;
+}
+.pageLinks {
+   border: thin solid Black;
+   background: PowderBlue;
+}

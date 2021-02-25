@@ -1,0 +1,8 @@
+
+body {
+    background-image: url("#{resource['images/microCenter/circuit.jpg']}");
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 2px;
+}

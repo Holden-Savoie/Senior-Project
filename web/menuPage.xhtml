@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+    </h:head>
+    <h:body>
+        <h:outputStylesheet name="css/PrimeFaces2.css"/>
+        <h:form>
+            <p:growl id="messages" showDetail="true"/>
+            <p:slideMenu style="height:150px; bottom:10px;">
+                <p:submenu label="Computers">
+                    <p:menuitem value="Acer Predator" action="#{productFind.setNumChosen('1')}" ajax="false"/>
+                    <p:menuitem value="Asus TUF" action="#{productFind.setNumChosen('2')}" ajax="false"/>
+                    <p:menuitem value="Macbook Pro" action="#{productFind.setNumChosen('3')}" ajax="false"/>                    
+                    <p:menuitem value="Surface Laptop" action="#{productFind.setNumChosen('4')}" ajax="false"/>
+                </p:submenu>
+                <p:submenu label="Phones">
+                    <p:menuitem value="Galaxy S10" action="#{productFind.setNumChosen('5')}" ajax="false"/>
+                    <p:menuitem value="iPhone 11" action="#{productFind.setNumChosen('6')}" ajax="false"/>
+                    <p:menuitem value="Pixel 3XL" action="#{productFind.setNumChosen('7')}" ajax="false"/>                    
+                    <p:menuitem value="Razer Phone 2" action="#{productFind.setNumChosen('8')}" ajax="false"/>
+                </p:submenu>
+                <p:menuitem value="show all" action="#{productFind.setIsSearching(false)}" ajax="false"/>
+            </p:slideMenu>
+        </h:form>
+    </h:body>
+</html>
